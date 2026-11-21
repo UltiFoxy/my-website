@@ -147,6 +147,14 @@ body.DarkMode .Box1 {
     margin-top: 0;
 }
 
-.Grey {
-    color: grey;
+.Greyoka {
+    color: #454545;
+}
+
+body.DarkMode .Greyoka {
+    color: #c7c7ff;
+}
+
+.Greyoka:hover {
+    text-decoration: underline;
 }

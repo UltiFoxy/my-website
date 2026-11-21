@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Hello There</title>
+</head>
+
+<body>
+    <div class="Credits">
+        Made by UltiFoxy<br>
+        <a class="Discord" href="https://discord.com/users/704616318728536075" target="_blank"
+            rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align: middle;">
+                <path fill="#5865F2"
+                    d="M20.32 4.37A19.8 19.8 0 0 0 15.46 3l-.24.49c-.69.21-1.37.33-2.22.33-.85 0-1.53-.12-2.22-.33L10.54 3a19.8 19.8 0 0 0-4.86 1.37C2.35 8.1 1.64 11.74 1.96 15.33A19.9 19.9 0 0 0 7.96 18.9l1.1-1.51a12.7 12.7 0 0 1-1.73-.83l.42-.33c3.34.1 6.82-.9 8.5-.9.42 0 .84.01 1.25.04l.42.33c-.55.32-1.13.6-1.73.83l1.1 1.51a19.9 19.9 0 0 0 6-3.57c.38-4.16-.65-7.76-3.97-10.96ZM8.68 13.93c-1 0-1.82-.92-1.82-2.05 0-1.12.8-2.05 1.82-2.05 1.02 0 1.84.93 1.82 2.05 0 1.13-.8 2.05-1.82 2.05Zm6.64 0c-1.02 0-1.82-.92-1.82-2.05 0-1.12.8-2.05 1.82-2.05 1.02 0 1.84.93 1.82 2.05 0 1.13-.8 2.05-1.82 2.05Z" />
+            </svg>
+        </a>
+        <a class="Youtube" href="https://www.youtube.com/@ultifoxy" target="_blank" rel="noopener noreferrer"
+            aria-label="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align: middle;">
+                <rect x="1" y="5" width="22" height="14" rx="4" fill="#FF0000" />
+                <path d="M10 9L16 12L10 15Z" fill="white" />
+            </svg>
+        </a>
+    </div>
+    <div class="Box1">
+        <div class="BioActions">
+            <a href="./index.html"><button type="button">Return</button></a>
+            <button class="ThemeButton" type="button" onclick="toggleTheme()">Dark mode</button>
+        </div>
+        <hr>
+        <ul class="BioList">
+            <li class="BioRow"><strong class="BioLabel">Name</strong><span class="BioValue">I am UltiFoxy, as you already know, but my name is Leo, I am an adult and learning programming websites like this one</span></li>
+            <li class="BioRow"><strong class="BioLabel">Place</strong><span class="BioValue">I am from 🇱🇹</span></li>
+            <li class="BioRow"><strong class="BioLabel">Age</strong><span class="BioValue">Currently I am 19 years old, my birthday is 2007-11-10 (Y-M-D)</span></li>
+            <li class="BioRow"><strong class="BioLabel">Languages</strong><span class="BioValue">I speak: Lithuanian, English, Russian</span></li>
+            <li class="BioRow"><strong class="BioLabel">Hobbies</strong><span class="BioValue">Gaming, Programming, Meteorology</span></li>
+        </ul><br>
+        <p>As I learn more about web development, I hope to create even better projects! And keep updating this one.</p>
+        <p>Thanks for visiting my page! Have a nice day :D</p>
+    </div>
+
+    <script>
+        console.log("You are on the bio page. You can return to the password page by clicking the 'Return' button.");
+
+        function toggleTheme() {
+            document.body.classList.toggle('DarkMode');
+            const isDark = document.body.classList.contains('DarkMode');
+            localStorage.setItem('darkMode', isDark);
+            updateThemeButtons(isDark);
+        }
+
+        function updateThemeButtons(isDark) {
+            document.querySelectorAll('.ThemeButton').forEach(function (button) {
+                button.textContent = isDark ? 'Light mode' : 'Dark mode';
+            });
+        }
+
+        const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+        document.body.classList.toggle('DarkMode', savedDarkMode);
+        updateThemeButtons(savedDarkMode);
+    </script>
+</body>
+
+</html>

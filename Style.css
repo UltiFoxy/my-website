@@ -1,0 +1,152 @@
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #aec00c, #c215c2) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Credits {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.Box1 {
+    width: fit-content;
+    max-width: 100%;
+    margin: 10px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.Credits {
+    width: fit-content;
+    max-width: 100%;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+}
+
+input,
+button {
+    font: inherit;
+    padding: 8px 12px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    font-family: "Times New Roman", Serif;
+}
+
+input:focus {
+    outline: 2px solid #000000;
+}
+
+button {
+    background-color: #292929;
+    color: white;
+    cursor: pointer;
+    font-family: "Times New Roman", Serif;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Discord,
+.Youtube {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.Discord {
+    color: darkblue;
+    width: fit-content;
+    max-width: 100%;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: rgb(20, 1, 131);
+}
+
+.Youtube {
+    color: darkred;
+    width: fit-content;
+    max-width: 100%;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: rgb(131, 1, 1);
+}
+
+.BioList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.BioRow {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: start;
+    gap: 12px;
+    margin: 10px 0;
+}
+
+.BioLabel {
+    text-align: left;
+}
+
+.BioValue {
+    text-align: center;
+}
+
+body.DarkMode {
+    background: linear-gradient(to bottom, #202020, #050505) no-repeat;
+}
+
+body.DarkMode .Box1 {
+    background-color: rgba(30, 30, 30, 0.95);
+    color: white;
+}
+
+.ThemeButton {
+    margin-top: 10px;
+}
+
+.BioActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.BioActions .ThemeButton {
+    margin-top: 0;
+}
+
+.Grey {
+    color: grey;
+}
